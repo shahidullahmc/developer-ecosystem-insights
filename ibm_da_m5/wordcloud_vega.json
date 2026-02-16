@@ -1,0 +1,75 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+
+  "data": [
+    {
+      "name": "default",
+      "transform": [
+        {
+          "type": "formula",
+          "as": "rotate",
+          "expr": "[0, 90][~~(datum.index % 2)]"
+        },
+        {
+          "type": "formula",
+          "as": "weight",
+          "expr": "if(datum.index==0, 600, 400)"
+        },
+        {
+          "type": "wordcloud",
+          "size": [{"signal": "width"}, {"signal": "height"}],
+          "text": {"field": "$dimension0"},
+          "fontSize": {"field": "$metric0"},
+          "fontWeight": {"field": "weight"},
+          "fontSizeRange": [
+            {"signal": "(width+height)/96"},
+            {"signal": "(width+height)/24"}
+          ],
+          "padding": {"value": 2},
+          "rotate": {"field": "rotate"}
+        }
+      ]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "default", "field": "$dimension0"},
+      "range": [
+        "#1b1f3b", "#283655", "#4d648d", "#1e3d59",
+        "#3a506b", "#0b132b", "#5bc0be", "#1c2541",
+        "#2e4057", "#3b3c4f", "#2d3142", "#4f5d75"
+      ]
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "text",
+      "from": {"data": "default"},
+      "encode": {
+        "enter": {
+          "text": {"field": "$dimension0"},
+          "align": {"value": "center"},
+          "baseline": {"value": "alphabetic"},
+          "fill": {"scale": "color", "field": "$dimension0"}
+        },
+        "update": {
+          "x": {"field": "x"},
+          "y": {"field": "y"},
+          "angle": {"field": "angle"},
+          "fontSize": {"field": "fontSize"},
+          "fontWeight": {"field": "weight"},
+          "fillOpacity": {"value": 1},
+          "stroke": {"value": "#000"},
+          "strokeWidth": {"value": 0.3}
+        },
+        "hover": {
+          "fillOpacity": {"value": 1}
+        }
+      }
+    }
+  ]
+}
