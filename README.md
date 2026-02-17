@@ -2,12 +2,13 @@
 A structured, data‑driven analysis of global developer trends using survey data. This project explores technology usage, future preferences, and demographic patterns across languages, databases, platforms, and frameworks. Includes dashboards, CASE logic for multi‑select fields, and a report summarizing key insights and strategic implications.
 
 # Developer Ecosystem Insights 2024
-### Turning raw survey data into clear, actionable intelligence about the global developer landscape.
+>### Turning raw survey data into clear, actionable intelligence about the global developer landscape.
 
-=========================================================<br>
-      Developer Ecosystem Insights 2024 <br>
-  Data • Dashboards • Insights • Visualization • Trends<br>
-=========================================================
+========================================================= <br>
+        Developer Ecosystem Insights 2024
+     Data • Dashboards • Insights • Visualization • Trends
+========================================================= <br>
+
 
 ## 📖 About This Project
 Developer Ecosystem Insights 2024 is a comprehensive analytical project designed to transform large-scale developer survey data into meaningful, decision-ready insights. The work blends rigorous data preparation, custom CASE logic, Vega-Lite visualizations, and interactive Looker Studio dashboards to reveal how developers work today, what technologies they prefer, and where the ecosystem is heading.
