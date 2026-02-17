@@ -4,9 +4,9 @@ A structured, data‑driven analysis of global developer trends using survey dat
 # Developer Ecosystem Insights 2024
 ### Turning raw survey data into clear, actionable intelligence about the global developer landscape.
 
-=========================================================
-      Developer Ecosystem Insights 2024
-  Data • Dashboards • Insights • Visualization • Trends
+=========================================================<br>
+      Developer Ecosystem Insights 2024 <br>
+  Data • Dashboards • Insights • Visualization • Trends<br>
 =========================================================
 
 ## 📖 About This Project
